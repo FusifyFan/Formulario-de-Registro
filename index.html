@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulario de Registro</h1>
+    <p>Por favor, complete este formulario con la información requerida</p>
+    <form method="post" action="">
+      <fieldset>
+        <label for="first-name">Ingrese su nombre: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Ingrese su apellido: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Ingrese su correo electrónico: <input id="email" name="email" type="email" required /></label>
+        <label for="password">Crea una contraseña: <input id="password" name="password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Tipo de cuenta (obligatorio)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Empresa</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Suba una foto de perfil: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="birth">Ingrese su fecha de nacimiento: <input id="birth" type="date" name="birth" /></label>
+        <label for="referrer">Quién te refirió acerca de nosotros?
+          <select id="referrer" name="referrer">
+            <option value="">(seleccione una)</option>
+            <option value="1">Un familiar</option>
+            <option value="2">Un amigo/a</option>
+            <option value="3">Las redes sociales</option>
+            <option value="4">Otro</option>
+          </select>
+        </label>
+        <label for="bio">Danos una breve biografía:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gusta programar porque..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Acepto los <a href="#" target="_blank">términos y condiciones</a>
+      </label>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
